@@ -1,0 +1,145 @@
+[16/Feb/2017 17:38:24] "GET / HTTP/1.1" 200 1767
+Not Found: /favicon.ico
+[16/Feb/2017 17:38:24] "GET /favicon.ico HTTP/1.1" 404 1946
+[16/Feb/2017 17:38:49] "GET / HTTP/1.1" 200 1767
+[16/Feb/2017 17:40:12] "GET / HTTP/1.1" 200 1767
+Invalid HTTP_HOST header: 'www.baidu.com'. You may need to add u'www.baidu.com' to ALLOWED_HOSTS.
+[16/Feb/2017 23:21:03] "GET http://www.baidu.com/ HTTP/1.1" 400 64175
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 86, in run
+    self.finish_response()
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 128, in finish_response
+    self.write(data)
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 217, in write
+    self._write(data)
+  File "/usr/lib/python2.7/socket.py", line 324, in write
+    self.flush()
+  File "/usr/lib/python2.7/socket.py", line 303, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 104] Connection reset by peer
+[16/Feb/2017 23:21:03] "GET http://www.baidu.com/ HTTP/1.1" 500 59
+[2017-02-16 23:21:03,957] - Broken pipe from ('123.151.42.61', 39827)
+
+Invalid HTTP_HOST header: 'www.baidu.com'. You may need to add u'www.baidu.com' to ALLOWED_HOSTS.
+[17/Feb/2017 00:40:37] "GET http://www.baidu.com/cache/global/img/gs.gif HTTP/1.1" 400 64456
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 86, in run
+    self.finish_response()
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 128, in finish_response
+    self.write(data)
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 217, in write
+    self._write(data)
+  File "/usr/lib/python2.7/socket.py", line 324, in write
+    self.flush()
+  File "/usr/lib/python2.7/socket.py", line 303, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 104] Connection reset by peer
+[17/Feb/2017 00:40:37] "GET http://www.baidu.com/cache/global/img/gs.gif HTTP/1.1" 500 59
+[2017-02-17 00:40:37,859] - Broken pipe from ('93.174.93.136', 52044)
+
+[17/Feb/2017 05:01:15] "GET / HTTP/1.1" 200 1767
+Not Found: /favicon.ico
+[17/Feb/2017 05:01:15] "GET /favicon.ico HTTP/1.1" 404 1946
+[17/Feb/2017 06:42:56] "GET / HTTP/1.1" 200 1767
+Not Found: /favicon.ico
+[17/Feb/2017 06:42:56] "GET /favicon.ico HTTP/1.1" 404 1946
+[17/Feb/2017 07:05:50] "GET / HTTP/1.1" 200 1767
+Not Found: /favicon.ico
+[17/Feb/2017 07:05:51] "GET /favicon.ico HTTP/1.1" 404 1946
+[17/Feb/2017 07:06:13] "GET / HTTP/1.1" 200 1767
+[17/Feb/2017 07:12:16] "GET / HTTP/1.1" 200 1767
+Not Found: /favicon.ico
+[17/Feb/2017 07:12:17] "GET /favicon.ico HTTP/1.1" 404 1946
+[17/Feb/2017 13:15:46] "GET / HTTP/1.1" 200 1767
+[17/Feb/2017 14:42:12] "GET / HTTP/1.1" 200 1767
+[17/Feb/2017 16:03:11] "GET / HTTP/1.1" 200 1767
+[17/Feb/2017 16:03:16] "GET / HTTP/1.1" 200 1767
+[17/Feb/2017 16:03:19] "GET / HTTP/1.1" 200 1767
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 13 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+February 16, 2017 - 17:38:06
+Django version 1.10.5, using settings 'board.settings'
+Starting development server at http://0:8888/
+Quit the server with CONTROL-C.
+Unhandled exception in thread started by <function wrapper at 0x7f5167030410>
+Traceback (most recent call last):
+  File "/home/cnode/.virtualenvs/board/local/lib/python2.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/home/cnode/.virtualenvs/board/local/lib/python2.7/site-packages/django/core/management/commands/runserver.py", line 113, in inner_run
+    autoreload.raise_last_exception()
+  File "/home/cnode/.virtualenvs/board/local/lib/python2.7/site-packages/django/utils/autoreload.py", line 249, in raise_last_exception
+    six.reraise(*_exception)
+  File "/home/cnode/.virtualenvs/board/local/lib/python2.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/home/cnode/.virtualenvs/board/local/lib/python2.7/site-packages/django/__init__.py", line 27, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/home/cnode/.virtualenvs/board/local/lib/python2.7/site-packages/django/apps/registry.py", line 108, in populate
+    app_config.import_models(all_models)
+  File "/home/cnode/.virtualenvs/board/local/lib/python2.7/site-packages/django/apps/config.py", line 199, in import_models
+    self.models_module = import_module(models_module_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/cnode/.virtualenvs/board/local/lib/python2.7/site-packages/django/contrib/auth/models.py", line 4, in <module>
+    from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
+  File "/home/cnode/.virtualenvs/board/local/lib/python2.7/site-packages/django/contrib/auth/base_user.py", line 52, in <module>
+    class AbstractBaseUser(models.Model):
+  File "/home/cnode/.virtualenvs/board/local/lib/python2.7/site-packages/django/db/models/base.py", line 119, in __new__
+    new_class.add_to_class('_meta', Options(meta, app_label))
+  File "/home/cnode/.virtualenvs/board/local/lib/python2.7/site-packages/django/db/models/base.py", line 316, in add_to_class
+    value.contribute_to_class(cls, name)
+  File "/home/cnode/.virtualenvs/board/local/lib/python2.7/site-packages/django/db/models/options.py", line 214, in contribute_to_class
+    self.db_table = truncate_name(self.db_table, connection.ops.max_name_length())
+  File "/home/cnode/.virtualenvs/board/local/lib/python2.7/site-packages/django/db/__init__.py", line 33, in __getattr__
+    return getattr(connections[DEFAULT_DB_ALIAS], item)
+  File "/home/cnode/.virtualenvs/board/local/lib/python2.7/site-packages/django/db/utils.py", line 211, in __getitem__
+    backend = load_backend(db['ENGINE'])
+  File "/home/cnode/.virtualenvs/board/local/lib/python2.7/site-packages/django/db/utils.py", line 115, in load_backend
+    return import_module('%s.base' % backend_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/cnode/.virtualenvs/board/local/lib/python2.7/site-packages/django/db/backends/mysql/base.py", line 28, in <module>
+    raise ImproperlyConfigured("Error loading MySQLdb module: %s" % e)
+django.core.exceptions.ImproperlyConfigured: Error loading MySQLdb module: No module named MySQLdb
+Unhandled exception in thread started by <function wrapper at 0x7f879b773410>
+Traceback (most recent call last):
+  File "/home/cnode/.virtualenvs/board/local/lib/python2.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/home/cnode/.virtualenvs/board/local/lib/python2.7/site-packages/django/core/management/commands/runserver.py", line 113, in inner_run
+    autoreload.raise_last_exception()
+  File "/home/cnode/.virtualenvs/board/local/lib/python2.7/site-packages/django/utils/autoreload.py", line 249, in raise_last_exception
+    six.reraise(*_exception)
+  File "/home/cnode/.virtualenvs/board/local/lib/python2.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/home/cnode/.virtualenvs/board/local/lib/python2.7/site-packages/django/__init__.py", line 27, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/home/cnode/.virtualenvs/board/local/lib/python2.7/site-packages/django/apps/registry.py", line 108, in populate
+    app_config.import_models(all_models)
+  File "/home/cnode/.virtualenvs/board/local/lib/python2.7/site-packages/django/apps/config.py", line 199, in import_models
+    self.models_module = import_module(models_module_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/cnode/.virtualenvs/board/local/lib/python2.7/site-packages/django/contrib/auth/models.py", line 4, in <module>
+    from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
+  File "/home/cnode/.virtualenvs/board/local/lib/python2.7/site-packages/django/contrib/auth/base_user.py", line 52, in <module>
+    class AbstractBaseUser(models.Model):
+  File "/home/cnode/.virtualenvs/board/local/lib/python2.7/site-packages/django/db/models/base.py", line 119, in __new__
+    new_class.add_to_class('_meta', Options(meta, app_label))
+  File "/home/cnode/.virtualenvs/board/local/lib/python2.7/site-packages/django/db/models/base.py", line 316, in add_to_class
+    value.contribute_to_class(cls, name)
+  File "/home/cnode/.virtualenvs/board/local/lib/python2.7/site-packages/django/db/models/options.py", line 214, in contribute_to_class
+    self.db_table = truncate_name(self.db_table, connection.ops.max_name_length())
+  File "/home/cnode/.virtualenvs/board/local/lib/python2.7/site-packages/django/db/__init__.py", line 33, in __getattr__
+    return getattr(connections[DEFAULT_DB_ALIAS], item)
+  File "/home/cnode/.virtualenvs/board/local/lib/python2.7/site-packages/django/db/utils.py", line 211, in __getitem__
+    backend = load_backend(db['ENGINE'])
+  File "/home/cnode/.virtualenvs/board/local/lib/python2.7/site-packages/django/db/utils.py", line 115, in load_backend
+    return import_module('%s.base' % backend_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/cnode/.virtualenvs/board/local/lib/python2.7/site-packages/django/db/backends/mysql/base.py", line 28, in <module>
+    raise ImproperlyConfigured("Error loading MySQLdb module: %s" % e)
+django.core.exceptions.ImproperlyConfigured: Error loading MySQLdb module: No module named MySQLdb

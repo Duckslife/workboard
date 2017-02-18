@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-
+from workboard import views
+from django.views.decorators.csrf import csrf_exempt 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+	url(r'^$', views.home, name ='home'),
 ]
