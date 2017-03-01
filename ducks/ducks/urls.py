@@ -1,4 +1,4 @@
-"""board URL Configuration
+"""ducks URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.10/topics/http/urls/
@@ -15,13 +15,11 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from workboard import views
-from django.views.decorators.csrf import csrf_exempt 
+import blog.views
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', views.home, name ='home'),
-    url(r'^show_write_form/$',views.show_write_form, name='show_write_form'),
-    url(r'^DoWriteBoard/$',views.DoWriteBoard, name ='DoWriteBoard'),
-    url(r'^listSpecificPageWork/$',views.listSpecificPageWork, name = 'listSpecificPageWork'),
-    url(r'^view_work/$', views.view_work, name='view_work')
+    url(r'^blog/$',blog.views.index, name='index'),
+    url(r'^blog/page/(?P<page>d+)/$',blog.views.index , name='page_view'),
+    url(r'^blog/entry/(?P<entry_id>d+)/$',blog.views.read, name='read')
 ]
