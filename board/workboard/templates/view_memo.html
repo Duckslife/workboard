@@ -1,19 +1,26 @@
 <html>
 	
 	<head>
+
+	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 		<title>
 			view 
 		</title>
 	</head>
-	<script language="javascript">
+
+	<script type="text/javascript">
 	
 	function boardlist()
 	{
 		var s= "{{search_str}}";
+		alert(s);
 		if(s=="None")
 			location.href = '/listSpecificPageWork?current_page={{currentpage}}';
 		else
 			location.href = '/listSearchedSpecificPageWork?pageForView={{current_page}}&serch_str={{search_srt}}';
+
 
 	}	
 	
@@ -24,7 +31,7 @@
 	}
 	
 	function boarddelete(){
-		location.href.='DeleteSpecificRow?memo_id={{memo_id}}&current_page={{current_page}}';
+		location.href='DeleteSpecificRow?memo_id={{memo_id}}&current_page={{current_page}}';
 	}
 
 	</script>
@@ -39,7 +46,7 @@
   <table  cellspacing = 0 cellpadding = 0 border = 0 width=500>
 	 <tr><td>
 		 <input type=button value="수정" OnClick="javascript:boardmodify()">
-	 	<input type=button value="목록" OnClick="javascript:boardlist()">
+	 	<input type=button value="목록" OnClick=boardlist()>
 	 	<input type=button value="삭제" OnClick="javascript:boarddelete()">
 	</td></tr>
 </table>  

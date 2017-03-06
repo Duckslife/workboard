@@ -23,5 +23,7 @@ urlpatterns = [
     url(r'^show_write_form/$',views.show_write_form, name='show_write_form'),
     url(r'^DoWriteBoard/$',views.DoWriteBoard, name ='DoWriteBoard'),
     url(r'^listSpecificPageWork/$',views.listSpecificPageWork, name = 'listSpecificPageWork'),
-    url(r'^view_work/$', views.view_work, name='view_work')
-]
+    url(r'^view_work/$', views.view_work, name='view_work'),
+    url(r'^listSearchedSpecificPageWork/$',views.list_searched_specific_page_work, name='listsearchedspecific'),
+    url(r'^listSpecificPageWork_to_update/$', views.list_specific_page_work_to_update, name='page_update' )
+    ]
