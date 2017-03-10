@@ -16,10 +16,12 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 
-from post_service import urls
+import post_service.urls
+import user_manager.urls
 
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^blog/',include(urls)),
+    url(r'^blog/',include(post_service.urls)),
+    url(r'^user/',include(user_manager.urls)),
 ]
