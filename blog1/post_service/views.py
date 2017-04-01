@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, render_to_response
 
 from django.http.response import HttpResponse
 from django.template import Context
@@ -37,3 +37,10 @@ def post_list(request):
         return HttpResponse(template.render(context))
     else:
         return HttpResponse('plz login')
+
+
+def post_write_form(request):
+    
+    
+    return HttpRespons(e'write_form.html')
+
