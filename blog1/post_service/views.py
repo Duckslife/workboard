@@ -41,6 +41,7 @@ def post_list(request):
 
 def post_write_form(request):
     
-    
+    pass
+'''
     return HttpRespons(e'write_form.html')
-
+'''
