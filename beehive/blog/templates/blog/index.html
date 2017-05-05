@@ -1,0 +1,628 @@
+{% extends 'blog/base.html' %}
+{% load staticfiles %}
+
+{% block headblock%}
+<head>
+  <meta charset="utf-8">
+  <title>The Project | FlightBee</title>
+  <meta name="description" content="The Project a Bootstrap-based, Responsive HTML5 Template">
+  <meta name="author" content="htmlcoder.me">
+
+  <!-- Mobile Meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="images/favicon.ico">
+
+  <!-- Web Fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Raleway:700,400,300' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=PT+Serif' rel='stylesheet' type='text/css'>
+
+  <!-- Bootstrap core CSS -->
+  <link href="{% static "bootstrap/css/bootstrap.css"%}" rel="stylesheet">
+
+  <!-- Font Awesome CSS -->
+  <link href="{% static "fonts/font-awesome/css/font-awesome.css"%}" rel="stylesheet">
+
+  <!-- Fontello CSS -->
+  <link href="{% static "fonts/fontello/css/fontello.css"%}" rel="stylesheet">
+
+  <!-- Plugins -->
+  <link href="{% static "plugins/magnific-popup/magnific-popup.css"%}" rel="stylesheet">
+  <link href="{% static "plugins/rs-plugin-5/css/settings.css"%}" rel="stylesheet">
+  <link href="{% static "plugins/rs-plugin-5/css/layers.css"%}" rel="stylesheet">
+  <link href="{% static "plugins/rs-plugin-5/css/navigation.css"%}" rel="stylesheet">
+  <link href="{% static "css/animations.css"%}" rel="stylesheet">
+  <link href="{% static "plugins/owlcarousel2/assets/owl.carousel.min.css"%}" rel="stylesheet">
+  <link href="{% static "plugins/owlcarousel2/assets/owl.theme.default.min.css"%}" rel="stylesheet">
+  <link href="{% static "plugins/hover/hover-min.css"%}" rel="stylesheet">
+
+  <!-- The Project's core CSS file -->
+  <!-- Use css/rtl_style.css for RTL version -->
+  <link href="{% static "css/style.css"%}" rel="stylesheet" >
+  <!-- The Project's Typography CSS file, includes used fonts -->
+  <!-- Used font for body: Roboto -->
+  <!-- Used font for headings: Raleway -->
+  <!-- Use css/rtl_typography-default.css for RTL version -->
+  <link href="{% static "css/typography-default.css"%}" rel="stylesheet" >
+  <!-- Color Scheme (In order to change the color scheme, replace the blue.css with the color scheme that you prefer)-->
+  <link href="{% static "css/skins/cool_green.css"%}" rel="stylesheet">
+
+
+  <!-- Custom css -->
+  <link href="{% static "css/custom.css"%}" rel="stylesheet">
+</head>
+{% endblock headblock %}
+
+
+
+{% block content %}
+<div class="banner">
+  <div class="container clearfix">
+
+    <!-- slideshow start -->
+    <!-- ================ -->
+    <div class="slideshow">
+
+      <!-- slider revolution start -->
+      <!-- ================ -->
+      <div class="slider-revolution-5-container">
+        <div id="slider-banner-fullwidth-big-height" class="slider-banner-fullwidth-big-height rev_slider" data-version="5.0">
+          <ul class="slides">
+            <!-- slide 1 start -->
+            <!-- ================ -->
+            <li data-transition="random" data-slotamount="default" data-masterspeed="default" data-title="Next Generation Template">
+
+            <!-- main image -->
+            <img src="http://www.fubiz.net/wp-content/uploads/2014/05/KimLeuenbergerTravelingCarsAdventures10.jpg" alt="slidebg1" data-bgposition="center top"  data-bgrepeat="no-repeat" data-bgfit="cover"  class="rev-slidebg">
+
+            <!-- Transparent Background -->
+            <div class="tp-caption dark-translucent-bg"
+              data-x="center"
+              data-y="center"
+              data-start="0"
+              data-transform_idle="o:1;"
+              data-transform_in="o:0;s:600;e:Power2.easeInOut;"
+              data-transform_out="o:0;s:600;"
+              data-width="5000"
+              data-height="5000">
+            </div>
+
+            <!-- LAYER NR. 1 -->
+            <div class="tp-caption large_white"
+              data-x="left"
+              data-y="215"
+              data-start="1000"
+              data-width="650"
+              data-transform_idle="o:1;"
+              data-transform_in="y:[100%];sX:1;sY:1;o:0;s:1150;e:Power4.easeInOut;"
+              data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;"
+              data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;"
+              data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;">
+                <a href="#">Next Generation Template</a>
+            </div>
+
+            <!-- LAYER NR. 2 -->
+            <div class="tp-caption large_white"
+              data-x="left"
+              data-y="270"
+              data-start="1100"
+              data-width="500"
+              data-transform_idle="o:1;"
+              data-transform_in="o:0;s:2000;e:Power4.easeInOut;">
+                <div class="separator-2 light"></div>
+            </div>
+
+            <!-- LAYER NR. 3 -->
+            <div class="tp-caption white small_white"
+              data-x="left"
+              data-y="280"
+              data-start="1100"
+              data-width="650"
+              data-transform_idle="o:1;"
+              data-transform_in="y:[100%];sX:1;sY:1;s:1000;e:Power4.easeInOut;"
+              data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;"
+              data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+              data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;">
+                <div class="post-info">
+                  <span class="post-date">
+                    <i class="icon-calendar"></i>
+                    <span class="day">06</span>
+                    <span class="month">Jan 2017 | </span>
+                  </span>
+                  <span class="comments"><i class="icon-chat"></i> <a href="#">22 comments</a></span>
+                </div>
+            </div>
+
+            <!-- LAYER NR. 4 -->
+            <div class="tp-caption white small_white"
+              data-x="left"
+              data-y="320"
+              data-start="1100"
+              data-width="650"
+              data-whitespace="normal"
+              data-transform_idle="o:1;"
+              data-transform_in="y:[100%];sX:1;sY:1;s:1000;e:Power4.easeInOut;"
+              data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;"
+              data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+              data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi commodi reiciendis recusandae sapiente at omnis nemo fugit...</p>
+            </div>
+
+            <!-- LAYER NR. 5 -->
+            <div class="tp-caption small_white"
+              data-x="left"
+              data-y="380"
+              data-start="1200"
+              data-width="650"
+              data-transform_idle="o:1;"
+              data-transform_in="y:[100%];sX:1;sY:1;s:800;e:Power4.easeInOut;"
+              data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;"
+              data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;"
+              data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;">
+                <a href="#" class="btn-md-link padding-hor-clear">Read More <i class="fa fa-arrow-right"></i></a>
+            </div>
+
+            </li>
+            <!-- slide 1 end -->
+
+            <!-- slide 2 start -->
+            <!-- ================ -->
+            <li data-transition="random" data-slotamount="default" data-masterspeed="default" data-title="Premium Bootstrap Template">
+
+            <!-- main image -->
+            <img src="https://cdn.photographylife.com/wp-content/uploads/2013/07/Traveling-Cars-16.jpeg" alt="slidebg2" data-bgposition="center top"  data-bgrepeat="no-repeat" data-bgfit="cover" class="rev-slidebg">
+
+            <!-- Transparent Background -->
+            <div class="tp-caption dark-translucent-bg"
+              data-x="center"
+              data-y="center"
+              data-start="0"
+              data-transform_idle="o:1;"
+              data-transform_in="o:0;s:600;e:Power2.easeInOut;"
+              data-transform_out="o:0;s:600;"
+              data-width="5000"
+              data-height="5000">
+            </div>
+
+            <!-- LAYER NR. 1 -->
+            <div class="tp-caption large_white"
+              data-x="left"
+              data-y="215"
+              data-start="1000"
+              data-width="650"
+              data-transform_idle="o:1;"
+              data-transform_in="y:[100%];sX:1;sY:1;o:0;s:1150;e:Power4.easeInOut;"
+              data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;"
+              data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;"
+              data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;">
+                <a href="#">Premium Bootstrap Template</a>
+            </div>
+
+            <!-- LAYER NR. 2 -->
+            <div class="tp-caption large_white"
+              data-x="left"
+              data-y="270"
+              data-start="1100"
+              data-width="500"
+              data-transform_idle="o:1;"
+              data-transform_in="o:0;s:2000;e:Power4.easeInOut;">
+                <div class="separator-2 light"></div>
+            </div>
+
+            <!-- LAYER NR. 3 -->
+            <div class="tp-caption white small_white"
+              data-x="left"
+              data-y="280"
+              data-start="1100"
+              data-width="650"
+              data-transform_idle="o:1;"
+              data-transform_in="y:[100%];sX:1;sY:1;s:1000;e:Power4.easeInOut;"
+              data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;"
+              data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+              data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;">
+                <div class="post-info">
+                  <span class="post-date">
+                    <i class="icon-calendar"></i>
+                    <span class="day">11</span>
+                    <span class="month">Dec 2017 | </span>
+                  </span>
+                  <span class="comments"><i class="icon-chat"></i> <a href="#">55 comments</a></span>
+                </div>
+            </div>
+
+            <!-- LAYER NR. 4 -->
+            <div class="tp-caption white small_white"
+              data-x="left"
+              data-y="320"
+              data-start="1100"
+              data-width="650"
+              data-whitespace="normal"
+              data-transform_idle="o:1;"
+              data-transform_in="y:[100%];sX:1;sY:1;s:1000;e:Power4.easeInOut;"
+              data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;"
+              data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+              data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet ipsam expedita dolorum vero impedit doloremque maiores officiis...</p>
+            </div>
+
+            <!-- LAYER NR. 5 -->
+            <div class="tp-caption small_white"
+              data-x="left"
+              data-y="380"
+              data-start="1200"
+              data-width="650"
+              data-transform_idle="o:1;"
+              data-transform_in="y:[100%];sX:1;sY:1;s:800;e:Power4.easeInOut;"
+              data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;"
+              data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;"
+              data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;">
+                <a href="#" class="btn-md-link padding-hor-clear">Read More <i class="fa fa-arrow-right"></i></a>
+            </div>
+
+            </li>
+            <!-- slide 2 end -->
+
+            <!-- slide 3 start -->
+            <!-- ================ -->
+            <li data-transition="random" data-slotamount="default" data-masterspeed="default" data-title="Premium Bootstrap Template">
+
+            <!-- main image -->
+            <img src="http://imgs.abduzeedo.com/files/gismullr/KimLeuenberger/tca05.jpg" alt="slidebg3" data-bgposition="center top"  data-bgrepeat="no-repeat" data-bgfit="cover" class="rev-slidebg">
+
+            <!-- Transparent Background -->
+            <div class="tp-caption dark-translucent-bg"
+              data-x="center"
+              data-y="center"
+              data-start="0"
+              data-transform_idle="o:1;"
+              data-transform_in="o:0;s:600;e:Power2.easeInOut;"
+              data-transform_out="o:0;s:600;"
+              data-width="5000"
+              data-height="5000">
+            </div>
+
+            <!-- LAYER NR. 1 -->
+            <div class="tp-caption large_white"
+              data-x="left"
+              data-y="215"
+              data-start="1000"
+              data-width="650"
+              data-transform_idle="o:1;"
+              data-transform_in="y:[100%];sX:1;sY:1;o:0;s:1150;e:Power4.easeInOut;"
+              data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;"
+              data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;"
+              data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;">
+                <a href="#">Premium Bootstrap Template</a>
+            </div>
+
+            <!-- LAYER NR. 2 -->
+            <div class="tp-caption large_white"
+              data-x="left"
+              data-y="270"
+              data-start="1100"
+              data-width="500"
+              data-transform_idle="o:1;"
+              data-transform_in="o:0;s:2000;e:Power4.easeInOut;">
+                <div class="separator-2 light"></div>
+            </div>
+
+            <!-- LAYER NR. 3 -->
+            <div class="tp-caption white small_white"
+              data-x="left"
+              data-y="280"
+              data-start="1100"
+              data-width="650"
+              data-transform_idle="o:1;"
+              data-transform_in="y:[100%];sX:1;sY:1;s:1000;e:Power4.easeInOut;"
+              data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;"
+              data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+              data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;">
+                <div class="post-info">
+                  <span class="post-date">
+                    <i class="icon-calendar"></i>
+                    <span class="day">11</span>
+                    <span class="month">Dec 2017 | </span>
+                  </span>
+                  <span class="comments"><i class="icon-chat"></i> <a href="#">55 comments</a></span>
+                </div>
+            </div>
+
+            <!-- LAYER NR. 4 -->
+            <div class="tp-caption white small_white"
+              data-x="left"
+              data-y="320"
+              data-start="1100"
+              data-width="650"
+              data-whitespace="normal"
+              data-transform_idle="o:1;"
+              data-transform_in="y:[100%];sX:1;sY:1;s:1000;e:Power4.easeInOut;"
+              data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;"
+              data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+              data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet ipsam expedita dolorum vero impedit doloremque maiores officiis...</p>
+            </div>
+
+            <!-- LAYER NR. 5 -->
+            <div class="tp-caption small_white"
+              data-x="left"
+              data-y="380"
+              data-start="1200"
+              data-width="650"
+              data-transform_idle="o:1;"
+              data-transform_in="y:[100%];sX:1;sY:1;s:800;e:Power4.easeInOut;"
+              data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;"
+              data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;"
+              data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;">
+                <a href="#" class="btn-md-link padding-hor-clear">Read More <i class="fa fa-arrow-right"></i></a>
+            </div>
+
+            </li>
+            <!-- slide 3 end -->
+
+          </ul>
+        </div>
+      </div>
+      <!-- slider revolution end -->
+
+    </div>
+    <!-- slideshow end -->
+
+  </div>
+</div>
+
+<section class="main-container">
+
+  <div class="container">
+    <div class="row">
+
+      <!-- main start -->
+      <!-- ================ -->
+      <div class="main col-md-12">
+
+        <!-- page-title start -->
+        <!-- ================ -->
+        <h1 class="page-title text-center">Featured Posts</h1>
+        <div class="separator with-icon"><i class="fa fa-pencil bordered"></i></div>
+        <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+        <br>
+        <br>
+        <!-- page-title end -->
+
+        <!-- masonry grid start -->
+        <!-- ================ -->
+        <div class="masonry-grid row">
+
+
+          <!-- masonry grid item start -->
+          <div class="masonry-grid-item col-sm-6 col-md-4">
+            <!-- blogpost start -->
+            <article class="blogpost shadow light-gray-bg bordered">
+              <div id="carousel-blog-post" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators bottom margin-clear">
+                  <li data-target="#carousel-blog-post" data-slide-to="0" class="active"></li>
+                  <li data-target="#carousel-blog-post" data-slide-to="1"></li>
+                  <li data-target="#carousel-blog-post" data-slide-to="2"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                  <div class="item active">
+                    <div class="overlay-container">
+                      <img src="{% static "images/blog-1.jpg"%}" alt="">
+                      <a class="overlay-link" href="blog-post.html"><i class="fa fa-link"></i></a>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="overlay-container">
+                      <img src="{% static "images/blog-3.jpg"%}" alt="">
+                      <a class="overlay-link" href="blog-post.html"><i class="fa fa-link"></i></a>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="overlay-container">
+                      <img src="{% static "images/blog-4.jpg"%}" alt="">
+                      <a class="overlay-link" href="blog-post.html"><i class="fa fa-link"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <header>
+                <h2><a href="blog-post.html">Blogpost with slider</a></h2>
+                <div class="post-info">
+                  <span class="post-date">
+                    <i class="icon-calendar"></i>
+                    <span class="day">12</span>
+                    <span class="month">May 2017</span>
+                  </span>
+                  <span class="submitted"><i class="icon-user-1"></i> by <a href="#">John Doe</a></span>
+                  <span class="comments"><i class="icon-chat"></i> <a href="#">22 comments</a></span>
+                </div>
+              </header>
+              <div class="blogpost-content">
+                <p>Mauris dolor sapien, malesuada at interdum ut, hendrerit eget lorem. Nunc interdum mi neque, et  sollicitudin purus fermentum ut. Suspendisse faucibus nibh odio, a vehicula eros pharetra in. Maecenas  ullamcorper commodo rutrum.</p>
+              </div>
+              <footer class="clearfix">
+                <div class="tags pull-left"><i class="icon-tags"></i> <a href="#">tag 1</a>, <a href="#">tag 2</a>, <a href="#">long tag 3</a></div>
+                <div class="link pull-right"><i class="icon-link"></i><a href="#">Read More</a></div>
+              </footer>
+            </article>
+            <!-- blogpost end -->
+          </div>
+          <!-- masonry grid item end -->
+
+          {%for post in post_list %}
+          <!-- masonry grid item start -->
+          <div class="masonry-grid-item col-sm-6 col-md-4">
+            <!-- blogpost start -->
+            <article class="blogpost shadow light-gray-bg bordered">
+              <div class="overlay-container">
+                <img src="{% static "images/blog-2.jpg"%}" alt="">
+                <a class="overlay-link" href="blog-post.html"><i class="fa fa-link"></i></a>
+              </div>
+              <header>
+                <h2><a href="blog-post.html">{{ post.title }}</a></h2>
+                <div class="post-info">
+                  <span class="post-date">
+                    <i class="icon-calendar"></i>
+                    <span class="day">10</span>
+                    <span class="month">May 2017</span>
+                  </span>
+                  <span class="submitted"><i class="icon-user-1"></i> by <a href="#">John Doe</a></span>
+                  <span class="comments"><i class="icon-chat"></i> <a href="#">22 comments</a></span>
+                </div>
+              </header>
+              <div class="blogpost-content">
+                <p>{{ post.content|slice:"0:60" }}..</p>
+              </div>
+              <footer class="clearfix">
+                <div class="tags pull-left"><i class="icon-tags"></i> <a href="#">tag 1</a>, <a href="#">tag 2</a>, <a href="#">long tag 3</a></div>
+                <div class="link pull-right"><i class="icon-link"></i><a href="#">Read More</a></div>
+              </footer>
+            </article>
+            <!-- blogpost end -->
+          </div>
+          <!-- masonry grid item end -->
+          {% endfor%}
+
+          <!-- masonry grid item start -->
+          <div class="masonry-grid-item col-sm-6 col-md-4">
+            <!-- blogpost start -->
+            <article class="blogpost shadow light-gray-bg bordered object-non-visible" data-animation-effect="fadeInUpSmall" data-effect-delay="100">
+              <header>
+                <h2><a href="blog-post.html">Text Post</a></h2>
+                <div class="post-info">
+                  <span class="post-date">
+                    <i class="icon-calendar"></i>
+                    <span class="day">09</span>
+                    <span class="month">May 2017</span>
+                  </span>
+                  <span class="submitted"><i class="icon-user-1"></i> by <a href="#">John Doe</a></span>
+                  <span class="comments"><i class="icon-chat"></i> <a href="#">22 comments</a></span>
+                </div>
+              </header>
+              <div class="blogpost-content">
+                <p>Mauris dolor sapien, malesuada at interdum ut, hendrerit eget lorem. Nunc interdum mi neque, et  sollicitudin purus fermentum ut. Suspendisse faucibus nibh odio, a vehicula eros pharetra in. Maecenas  ullamcorper commodo rutrum. In iaculis lectus vel augue eleifend dignissim. Aenean viverra semper sollicitudin.</p>
+              </div>
+              <footer class="clearfix">
+                <div class="tags pull-left"><i class="icon-tags"></i> <a href="#">tag 1</a>, <a href="#">tag 2</a>, <a href="#">long tag 3</a></div>
+                <div class="link pull-right"><i class="icon-link"></i><a href="#">Read More</a></div>
+              </footer>
+            </article>
+            <!-- blogpost end -->
+          </div>
+          <!-- masonry grid item end -->
+
+          <!-- masonry grid item start -->
+          <div class="masonry-grid-item col-sm-6 col-md-4">
+            <!-- blogpost start -->
+            <article class="blogpost shadow light-gray-bg bordered object-non-visible" data-animation-effect="fadeInUpSmall" data-effect-delay="100">
+              <div class="audio-wrapper">
+                <iframe height="166" class="margin-clear" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/231321623&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+              </div>
+              <header>
+                <h2><a href="blog-post.html">Audio post</a></h2>
+                <div class="post-info">
+                  <span class="post-date">
+                    <i class="icon-calendar"></i>
+                    <span class="day">08</span>
+                    <span class="month">May 2017</span>
+                  </span>
+                  <span class="submitted"><i class="icon-user-1"></i> by <a href="#">John Doe</a></span>
+                  <span class="comments"><i class="icon-chat"></i> <a href="#">22 comments</a></span>
+                </div>
+              </header>
+              <div class="blogpost-content">
+                <p>Mauris dolor sapien, malesuada at interdum ut, hendrerit eget lorem. Nunc interdum mi neque, et  sollicitudin purus fermentum ut. Suspendisse faucibus nibh odio, a vehicula eros pharetra in. Maecenas  ullamcorper commodo rutrum. In iaculis lectus vel augue eleifend dignissim. Aenean viverra semper sollicitudin.</p>
+              </div>
+              <footer class="clearfix">
+                <div class="tags pull-left"><i class="icon-tags"></i> <a href="#">tag 1</a>, <a href="#">tag 2</a>, <a href="#">long tag 3</a></div>
+                <div class="link pull-right"><i class="icon-link"></i><a href="#">Read More</a></div>
+              </footer>
+            </article>
+            <!-- blogpost end -->
+          </div>
+          <!-- masonry grid item end -->
+
+          <!-- masonry grid item start -->
+          <div class="masonry-grid-item col-sm-6 col-md-4">
+            <!-- blogpost start -->
+            <article class="blogpost shadow light-gray-bg bordered object-non-visible" data-animation-effect="fadeInUpSmall" data-effect-delay="100">
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="//www.youtube.com/embed/91J8pLHdDB0"></iframe>
+              </div>
+              <header>
+                <h2><a href="blog-post.html">Blogpost with embedded youtube video</a></h2>
+                <div class="post-info">
+                  <span class="post-date">
+                    <i class="icon-calendar"></i>
+                    <span class="day">07</span>
+                    <span class="month">May 2017</span>
+                  </span>
+                  <span class="submitted"><i class="icon-user-1"></i> by <a href="#">John Doe</a></span>
+                  <span class="comments"><i class="icon-chat"></i> <a href="#">22 comments</a></span>
+                </div>
+              </header>
+              <div class="blogpost-content">
+                <p>Mauris dolor sapien, malesuada at interdum ut, hendrerit eget lorem. Nunc interdum mi neque, et  sollicitudin purus fermentum ut. Suspendisse faucibus nibh odio, a vehicula eros pharetra in. Maecenas  ullamcorper commodo rutrum. In iaculis lectus vel augue eleifend dignissim.</p>
+              </div>
+              <footer class="clearfix">
+                <div class="tags pull-left"><i class="icon-tags"></i> <a href="#">tag 1</a>, <a href="#">tag 2</a>, <a href="#">long tag 3</a></div>
+                <div class="link pull-right"><i class="icon-link"></i><a href="#">Read More</a></div>
+              </footer>
+            </article>
+            <!-- blogpost end -->
+          </div>
+          <!-- masonry grid item end -->
+
+
+
+
+        </div>
+        <!-- masonry grid end -->
+
+      </div>
+      <!-- main end -->
+
+    </div>
+  </div>
+</section>
+{% endblock content %}
+
+
+
+{% block jsblock %}
+<!-- JavaScript files placed at the end of the document so the pages load faster -->
+<!-- ================================================== -->
+<!-- Jquery and Bootstap core js files -->
+<script type="text/javascript" src="{% static "plugins/jquery.min.js"%}"></script>
+<script type="text/javascript" src="{% static "bootstrap/js/bootstrap.min.js"%}"></script>
+<!-- Modernizr javascript -->
+<script type="text/javascript" src="{% static "plugins/modernizr.js"%}"></script>
+<script type="text/javascript" src="{% static "plugins/rs-plugin-5/js/jquery.themepunch.tools.min.js"%}?rev=5.0"></script>
+<script type="text/javascript" src="{% static "plugins/rs-plugin-5/js/jquery.themepunch.revolution.min.js"%}?rev=5.0"></script>
+<!-- Isotope javascript -->
+<script type="text/javascript" src="{% static "plugins/isotope/isotope.pkgd.min.js"%}"></script>
+<!-- Magnific Popup javascript -->
+<script type="text/javascript" src="{% static "plugins/magnific-popup/jquery.magnific-popup.min.js"%}"></script>
+<!-- Appear javascript -->
+<script type="text/javascript" src="{% static "plugins/waypoints/jquery.waypoints.min.js"%}"></script>
+<!-- Count To javascript -->
+<script type="text/javascript" src="{% static "plugins/jquery.countTo.js"%}"></script>
+<!-- Parallax javascript -->
+<script src="{% static "plugins/jquery.parallax-1.1.3.js"%}"></script>
+<!-- Contact form -->
+<script src="{% static "plugins/jquery.validate.js"%}"></script>
+<!-- Owl carousel javascript -->
+<script type="text/javascript" src="{% static "plugins/owlcarousel2/owl.carousel.min.js"%}"></script>
+<!-- SmoothScroll javascript -->
+<script type="text/javascript" src="{% static "plugins/jquery.browser.js"%}"></script>
+<script type="text/javascript" src="{% static "plugins/SmoothScroll.js"%}"></script>
+<!-- Initialization of Plugins -->
+<script type="text/javascript" src="{% static "js/template.js"%}"></script>
+<!-- Custom Scripts -->
+<script type="text/javascript" src="{% static "js/custom.js"%}"></script>
+{% endblock jsblock%}
