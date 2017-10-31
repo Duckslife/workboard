@@ -1,6 +1,4 @@
-{% load staticfiles %}
-
-<!DOCTYPE html>
+{% load staticfiles %}<!DOCTYPE html>
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
 <!--[if gt IE 9]> <html lang="en" class="ie"> <![endif]-->
 <!--[if !IE]><!-->
@@ -15,13 +13,15 @@
 	}
 </style>
 
+<link href="{% static "plugins/morphext/morphext.css"%}" rel="stylesheet">
+
 	<!-- body classes:  -->
 	<!-- "boxed": boxed layout mode e.g. <body class="boxed"> -->
 	<!-- "pattern-1 ... pattern-9": background patterns for boxed layout mode e.g. <body class="boxed pattern-1"> -->
 	<!-- "transparent-header": makes the header transparent and pulls the banner to top -->
 	<!-- "gradient-background-header": applies gradient background to header -->
 	<!-- "page-loader-1 ... page-loader-6": add a page loader to the page (more info @components-page-loaders.html) -->
-	<body class="no-trans"> <!--"no-trans"-->
+	<body class="no-trans  page-loader-1" onload="initialize();"> <!--"no-trans"-->
 
 		<!-- scrollToTop -->
 		<!-- ================ -->
@@ -50,10 +50,10 @@
 									<ul class="social-links circle small clearfix hidden-xs">
 										<li class="twitter"><a target="_blank" href="http://www.twitter.com"><i class="fa fa-twitter"></i></a></li>
 										<li class="skype"><a target="_blank" href="http://www.skype.com"><i class="fa fa-skype"></i></a></li>
-										<li class="linkedin"><a target="_blank" href="http://www.linkedin.com"><i class="fa fa-linkedin"></i></a></li>
+										<!--<li class="linkedin"><a target="_blank" href="http://www.linkedin.com"><i class="fa fa-linkedin"></i></a></li>-->
 										<li class="googleplus"><a target="_blank" href="http://plus.google.com"><i class="fa fa-google-plus"></i></a></li>
 										<li class="youtube"><a target="_blank" href="http://www.youtube.com"><i class="fa fa-youtube-play"></i></a></li>
-										<li class="flickr"><a target="_blank" href="http://www.flickr.com"><i class="fa fa-flickr"></i></a></li>
+										<!--<li class="flickr"><a target="_blank" href="http://www.flickr.com"><i class="fa fa-flickr"></i></a></li>-->
 										<li class="facebook"><a target="_blank" href="http://www.facebook.com"><i class="fa fa-facebook"></i></a></li>
 										<li class="pinterest"><a target="_blank" href="http://www.pinterest.com"><i class="fa fa-pinterest"></i></a></li>
 									</ul>
@@ -63,9 +63,9 @@
 											<ul class="dropdown-menu dropdown-animation">
 												<li class="twitter"><a target="_blank" href="http://www.twitter.com"><i class="fa fa-twitter"></i></a></li>
 												<li class="skype"><a target="_blank" href="http://www.skype.com"><i class="fa fa-skype"></i></a></li>
-												<li class="linkedin"><a target="_blank" href="http://www.linkedin.com"><i class="fa fa-linkedin"></i></a></li>
+												<!--<li class="linkedin"><a target="_blank" href="http://www.linkedin.com"><i class="fa fa-linkedin"></i></a></li>-->
 												<li class="googleplus"><a target="_blank" href="http://plus.google.com"><i class="fa fa-google-plus"></i></a></li>
-												<li class="youtube"><a target="_blank" href="http://www.youtube.com"><i class="fa fa-youtube-play"></i></a></li>
+												<!--<li class="youtube"><a target="_blank" href="http://www.youtube.com"><i class="fa fa-youtube-play"></i></a></li>-->
 												<li class="flickr"><a target="_blank" href="http://www.flickr.com"><i class="fa fa-flickr"></i></a></li>
 												<li class="facebook"><a target="_blank" href="http://www.facebook.com"><i class="fa fa-facebook"></i></a></li>
 												<li class="pinterest"><a target="_blank" href="http://www.pinterest.com"><i class="fa fa-pinterest"></i></a></li>
@@ -73,9 +73,9 @@
 										</div>
 									</div>
 									<ul class="list-inline hidden-sm hidden-xs">
-										<li><i class="fa fa-map-marker pr-5 pl-10"></i>republic of korea</li>
-										<li><i class="fa fa-phone pr-5 pl-10"></i>+82 010 1234 1234</li>
-										<li><i class="fa fa-envelope-o pr-5 pl-10"></i> beehive@gmail.com</li>
+										<li><i class="fa fa-map-marker pr-5 pl-10"></i>대한민국</li>
+										<!--<li><i class="fa fa-phone pr-5 pl-10"></i> 010 2520 0725</li>-->
+										<li><i class="fa fa-envelope-o pr-5 pl-10"></i>feedback : jshsakura@gmail.com</li>
 									</ul>
 								</div>
 								<!-- header-top-first end -->
@@ -90,34 +90,34 @@
 									<!-- ================ -->
 									<div class="header-top-dropdown text-right">
 										<div class="btn-group">
-											<a href="/signup" class="btn btn-default btn-sm"><i class="fa fa-user pr-10"></i> Sign Up</a>
+											<a href="/signup" class="btn btn-default btn-sm"><i class="fa fa-user pr-10"></i> 회원가입</a>
 										</div>
 										<div class="btn-group dropdown">
-											<button type="button" class="btn dropdown-toggle btn-default btn-sm" data-toggle="dropdown"><i class="fa fa-lock pr-10"></i> Login</button>
+											<button type="button" class="btn dropdown-toggle btn-default btn-sm" data-toggle="dropdown"><i class="fa fa-lock pr-10"></i> 로그인</button>
 											<ul class="dropdown-menu dropdown-menu-right dropdown-animation">
 												<li>
 													<form class="login-form margin-clear">
 														<div class="form-group has-feedback">
-															<label class="control-label">Username</label>
+															<label class="control-label">아이디/이메일</label>
 															<input type="text" class="form-control" placeholder="">
 															<i class="fa fa-user form-control-feedback"></i>
 														</div>
 														<div class="form-group has-feedback">
-															<label class="control-label">Password</label>
+															<label class="control-label">비밀번호</label>
 															<input type="password" class="form-control" placeholder="">
 															<i class="fa fa-lock form-control-feedback"></i>
 														</div>
-														<button type="submit" class="btn btn-gray btn-sm">Log In</button>
+														<button type="submit" class="btn btn-gray btn-sm">로그인</button>
 														<span class="pl-5 pr-5">or</span>
-														<button type="submit" class="btn btn-default btn-sm">Sing Up</button>
+														<button type="submit" class="btn btn-default btn-sm">또는 회원가입</button>
 														<ul>
-															<li><a href="#">Forgot your password?</a></li>
+															<li><a href="#">비밀번호가 뭐였더라?</a></li>
 														</ul>
-														<span class="text-center">Login with</span>
+														<span class="text-center">기존 아이디로 로그인</span>
 														<ul class="social-links circle small colored clearfix">
-															<li class="facebook"><a target="_blank" href="http://www.facebook.com"><i class="fa fa-facebook"></i></a></li>
-															<li class="twitter"><a target="_blank" href="http://www.twitter.com"><i class="fa fa-twitter"></i></a></li>
-															<li class="googleplus"><a target="_blank" href="http://plus.google.com"><i class="fa fa-google-plus"></i></a></li>
+															<li class="facebook" ><a target="_blank" href="http://www.facebook.com"><i class="fa fa-facebook"></i></a></li>
+															<li class="twitter"  ><a target="_blank" href="http://www.twitter.com"><i class="fa fa-twitter"></i></a></li>
+															<li class="googleplus" ><a target="_blank" href="http://plus.google.com"><i class="fa fa-google-plus"></i></a></li>
 														</ul>
 													</form>
 												</li>
@@ -179,12 +179,13 @@
 
 											<!-- Toggle get grouped for better mobile display -->
 											<div class="navbar-header">
-												<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
-													<span class="sr-only">Toggle navigation</span>
-													<span class="icon-bar"></span>
-													<span class="icon-bar"></span>
-													<span class="icon-bar"></span>
-												</button>
+
+													<button type="button" class="navbar-toggle" data-toggle="collapse"  data-target="#navbar-collapse-1">
+														<span class="sr-only">Toggle navigation</span>
+														<span class="icon-bar"></span>
+														<span class="icon-bar"></span>
+														<span class="icon-bar"></span>
+													</button>
 
 											</div>
 
@@ -194,13 +195,32 @@
 												<ul class="nav navbar-nav navbar-right">
 
 													<!-- mega-menu start -->
-													<li class="mega-menu active">
-														<a href="/index" >Home</a>
+													<li class="mega-menu ">
+														<a href="/myroute" ><i class="fa fa-plane" aria-hidden="true"></i> My Route</a>
 
 													</li>
+
+													<li class="mega-menu ">
+														<a href="/another" ><i class="fa fa-suitcase" aria-hidden="true"></i> Another           Route</a>
+
+													</li>
+
+
+													<li class="mega-menu ">
+														<a href="/write/route" ><i class="fa fa-wheelchair-alt" aria-hidden="true"></i> write test</a>
+
+													</li>
+													<!--<li class="dropdown ">
+														<a  class="dropdown-toggle" data-toggle="dropdown" href="#">Travel        </a>
+														<ul class="dropdown-menu">
+															<li ><a href="features-pricing-tables-1.html">My Route</a></li>
+															<li ><a href="features-pricing-tables-2.html">Another           Route</a></li>
+														</ul>
+													</li>-->
+
 													<!-- mega-menu end -->
 													<!-- mega-menu start -->
-													<li class="dropdown  mega-menu">
+													<!--<li class="dropdown  mega-menu">
 														<a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages</a>
 														<ul class="dropdown-menu">
 															<li>
@@ -263,9 +283,9 @@
 																</div>
 															</li>
 														</ul>
-													</li>
+													</li>-->
 													<!-- mega-menu end -->
-													<li class="dropdown">
+													<!--<li class="dropdown">
 														<a class="dropdown-toggle" data-toggle="dropdown" href="#">Features</a>
 														<ul class="dropdown-menu">
 															<li class="dropdown">
@@ -369,9 +389,9 @@
 															<li ><a href="features-backgrounds.html">Backgrounds</a></li>
 															<li ><a href="features-grid.html">Grid</a></li>
 														</ul>
-													</li>
+													</li>-->
 													<!-- mega-menu start -->
-													<li class="dropdown  mega-menu narrow">
+													<!--<li class="dropdown  mega-menu narrow">
 														<a href="#" class="dropdown-toggle" data-toggle="dropdown">Components</a>
 														<ul class="dropdown-menu">
 															<li>
@@ -417,9 +437,9 @@
 																</div>
 															</li>
 														</ul>
-													</li>
+													</li>-->
 													<!-- mega-menu end -->
-													<li class="dropdown ">
+													<!--<li class="dropdown ">
 														<a href="portfolio-grid-2-3-col.html" class="dropdown-toggle" data-toggle="dropdown">Portfolio</a>
 														<ul class="dropdown-menu">
 															<li class="dropdown ">
@@ -521,7 +541,7 @@
 															<li ><a href="blog-timeline.html">Timeline</a></li>
 															<li ><a href="blog-post.html">Blog Post</a></li>
 														</ul>
-													</li>
+													</li>-->
 												</ul>
 												<!-- main-menu end -->
 
@@ -573,11 +593,11 @@
 							<div class="call-to-action text-center">
 								<div class="row">
 									<div class="col-sm-8">
-										<h2>Powerful Bootstrap Template</h2>
-										<h2>Waste no more time</h2>
+										<h2>매주 추천 여행코스를 받아보고 싶으세요?</h2>
+										<h2>여행코스를 메일로 받으시려면 구독하기를 눌러주세요.</h2>
 									</div>
 									<div class="col-sm-4">
-										<p class="mt-10"><a href="#" class="btn btn-animated btn-lg btn-gray-transparent ">Purchase<i class="fa fa-cart-arrow-down pl-20"></i></a></p>
+										<p class="mt-10"><a href="#" class="btn btn-animated btn-lg btn-gray-transparent ">구독하기<i class="fa fa-envelope pl-20"></i></a></p>
 									</div>
 								</div>
 							</div>
@@ -602,31 +622,40 @@
 										<div class="logo-footer text-left">
 											<span class="logo-font" style="font-size:30px;"><a href="index">Flight Bee</a></span>
 										</div>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus illo vel dolorum soluta consectetur doloribus sit. Delectus non tenetur odit dicta vitae debitis suscipit doloribus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed dolore fugit vitae quia dicta inventore reiciendis. Ipsa, aut voluptas quaerat.</p>
+										<p><br>
+	바보는 방황하고 현명한 사람은 여행한다. -풀러<br>
+	세계는 한 권의 책이며, 여행자들은 그 책의 한 페이지를 읽었을 뿐이다. -아우구스티누스<br>
+	여행과 변화를 사랑하는 사람은 생명이 있는 사람이다. -바그너<br>
+	여행은 정신을 다시 젊어지게 하는 샘이다. -안데르센<br>
+	여행은 무엇보다도 위대하고 엄격한 학문과 같은 것이다. -카뮈 <br>
+	여행을 많이 한 사람은 아는 것도 많다. -토마스 풀러<br>
+										</p>
 										<ul class="list-inline mb-20">
-											<li><i class="text-default fa fa-map-marker pr-5"></i> One infinity loop, 54100</li>
-											<li><i class="text-default fa fa-phone pl-10 pr-5"></i> +00 1234567890</li>
-											<li><a href="mailto:info@theproject.com" class="link-dark"><i class="text-default fa fa-envelope-o pl-10 pr-5"></i> info@theproject.com</a></li>
+											<li><i class="text-default fa fa-map-marker pr-5"></i> Beehive Company</li>
+											<li><i class="text-default fa fa-phone pl-10 pr-5"></i> 02-123-4567</li>
+											<li><a href="mailto:jshsakura@gmail.com" class="link-dark"><i class="text-default fa fa-envelope-o pl-10 pr-5"></i> jshsakura@gmail.com</a></li>
 										</ul>
 										<div class="separator-2"></div>
 										<ul class="social-links circle margin-clear animated-effect-1">
 											<li class="facebook"><a target="_blank" href="http://www.facebook.com"><i class="fa fa-facebook"></i></a></li>
 											<li class="twitter"><a target="_blank" href="http://www.twitter.com"><i class="fa fa-twitter"></i></a></li>
-											<li class="googleplus"><a target="_blank" href="http://plus.google.com"><i class="fa fa-google-plus"></i></a></li>
+											<!--<li class="googleplus"><a target="_blank" href="http://plus.google.com"><i class="fa fa-google-plus"></i></a></li>
 											<li class="linkedin"><a target="_blank" href="http://www.linkedin.com"><i class="fa fa-linkedin"></i></a></li>
 											<li class="xing"><a target="_blank" href="http://www.xing.com"><i class="fa fa-xing"></i></a></li>
+
+											<li class="dribbble"><a target="_blank" href="https://dribbble.com/"><i class="fa fa-dribbble"></i></a></li>-->
 											<li class="skype"><a target="_blank" href="http://www.skype.com"><i class="fa fa-skype"></i></a></li>
 											<li class="youtube"><a target="_blank" href="https://www.youtube.com"><i class="fa fa-youtube"></i></a></li>
-											<li class="dribbble"><a target="_blank" href="https://dribbble.com/"><i class="fa fa-dribbble"></i></a></li>
 											<li class="pinterest"><a target="_blank" href="http://www.pinterest.com"><i class="fa fa-pinterest"></i></a></li>
-											<li class="flickr"><a target="_blank" href="http://www.flickr.com"><i class="fa fa-flickr"></i></a></li>
+											<!--<li class="flickr"><a target="_blank" href="http://www.flickr.com"><i class="fa fa-flickr"></i></a></li>-->
 											<li class="instagram"><a target="_blank" href="http://www.instagram.com"><i class="fa fa-instagram"></i></a></li>
 										</ul>
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="footer-content">
-										<h2 class="title">Contact Us</h2>
+
+										<h4><i class="fa fa-asterisk" aria-hidden="true"></i> FligtBee 의 <span class="text-rotator text-default morphext" data-rotator-animation-effect="fadeIn"><span class="animated fadeIn"> 개선할 부분 , 좋았던 기능 , 간단한 소감 , 하고싶은 말</span></span> 은 무엇인가요?</h4>
 										<div class="alert alert-success hidden" id="MessageSent2">
 											We have received your message, we will contact you very soon.
 										</div>
@@ -635,21 +664,22 @@
 										</div>
 										<form role="form" id="footer-form" class="margin-clear">
 											<div class="form-group has-feedback mb-10">
-												<label class="sr-only" for="name2">Name</label>
-												<input type="text" class="form-control" id="name2" placeholder="Name" name="name2">
+												<label class="sr-only" for="name2">이름</label>
+												<input type="text" class="form-control" id="name2" placeholder="이름" name="name2">
 												<i class="fa fa-user form-control-feedback"></i>
 											</div>
 											<div class="form-group has-feedback mb-10">
-												<label class="sr-only" for="email2">Email address</label>
-												<input type="email" class="form-control" id="email2" placeholder="Enter email" name="email2">
+												<label class="sr-only" for="email2">Email 주소</label>
+												<input type="email" class="form-control" id="email2" placeholder="Email 주소" name="email2">
 												<i class="fa fa-envelope form-control-feedback"></i>
 											</div>
 											<div class="form-group has-feedback mb-10">
-												<label class="sr-only" for="message2">Message</label>
-												<textarea class="form-control" rows="4" id="message2" placeholder="Message" name="message2"></textarea>
+												<label class="sr-only" for="message2">내용</label>
+												<textarea class="form-control" rows="4" id="message2" placeholder="내용은 자유롭게.." name="message2"></textarea>
 												<i class="fa fa-pencil form-control-feedback"></i>
 											</div>
-											<input type="submit" value="Send" class="margin-clear submit-button btn btn-default">
+
+											<a href="#" class="btn btn-default btn-md btn-animated margin-clear">전송하기 <i class="fa fa-paper-plane" aria-hidden="true"></i></a>
 										</form>
 									</div>
 								</div>
@@ -666,7 +696,7 @@
 						<div class="subfooter-inner">
 							<div class="row">
 								<div class="col-md-12">
-									<p class="text-center">Copyright © 2017 The Project by <a target="_blank" href="http://htmlcoder.me">HtmlCoder</a>. All Rights Reserved</p>
+									<p class="text-center">Copyright © 2017 The Project by <a target="_blank" href="#">Beehive</a>. All Rights Reserved</p>
 								</div>
 							</div>
 						</div>
@@ -682,6 +712,13 @@
 
 		{% block jsblock %}
 		{% endblock %}
+		<script type="text/javascript" src="{% static "plugins/morphext/morphext.min.js"%}"></script>
+
+		<!-- Pace javascript -->
+		<script type="text/javascript" src="{% static "plugins/pace/pace.min.js"%}"></script>
+		<!-- Google Maps javascript -->
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBfxiEU8s8eSGNQmm5wjTX-asgUFaa8EEU&libraries=places"></script>
+
 
 	</body>
 </html>

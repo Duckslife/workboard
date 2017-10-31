@@ -1,6 +1,5 @@
 {% extends 'blog/base.html' %}
 {% load staticfiles %}
-
 {% block headblock%}
 <head>
   <meta charset="utf-8">
@@ -12,7 +11,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Favicon -->
-  <link rel="shortcut icon" href="images/favicon.ico">
+  <link rel="shortcut icon" href="{% static "images/favicon.ico"%}">
 
   <!-- Web Fonts -->
   <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
@@ -48,82 +47,132 @@
   <!-- Use css/rtl_typography-default.css for RTL version -->
   <link href="{% static "css/typography-default.css"%}" rel="stylesheet" >
   <!-- Color Scheme (In order to change the color scheme, replace the blue.css with the color scheme that you prefer)-->
-  <link href="{% static "css/skins/pink.css"%}" rel="stylesheet">
+  <link href="{% static "css/skins/gray.css"%}" rel="stylesheet">
 
 
   <!-- Custom css -->
   <link href="{% static "css/custom.css"%}" rel="stylesheet">
+
+  <script>
+  var map;
+
+  function initialize() {
+    // Create a map centered in Pyrmont, Sydney (Australia).
+    map = new google.maps.Map(document.getElementById('map-canvas'), {
+      center: {lat: -33.8666, lng: 151.1958},
+      zoom: 15
+    });
+
+    // Search for Google's office in Australia.
+    var request = {
+      location: map.getCenter(),
+      radius: '500',
+      query: 'Google Sydney'
+    };
+
+    var service = new google.maps.places.PlacesService(map);
+    service.textSearch(request, callback);
+  }
+
+  // Checks that the PlacesServiceStatus is OK, and adds a marker
+  // using the place ID and location from the PlacesService.
+  function callback(results, status) {
+    if (status == google.maps.places.PlacesServiceStatus.OK) {
+      var marker = new google.maps.Marker({
+        map: map,
+        place: {
+          placeId: results[0].place_id,
+          location: results[0].geometry.location
+        }
+      });
+    }
+  }
+
+  </script>
+
 </head>
 {% endblock headblock %}
 
 
 
 {% block content %}
-<section class="main-container dark-translucent-bg" style="background-image:url('http://1.bp.blogspot.com/-TUc3aat3-pg/Vkj0Sq4ZsnI/AAAAAAAADQ8/nIlBjfeJRNY/s1600/toy-blue-car-mood-wallpaper-53cb2c799ba94.jpg');">
-  <div class="container">
-    <div class="row">
-      <!-- main start -->
-      <!-- ================ -->
-      <div class="main object-non-visible" data-animation-effect="fadeInUpSmall" data-effect-delay="100">
-        <div class="form-block center-block p-30 light-gray-bg border-clear">
-          <h2 class="title"><i class="fa fa-tag" aria-hidden="true"></i> 회원가입</h2>
-          <form class="form-horizontal" role="form">
-            <div class="form-group has-feedback">
-              <label for="inputName" class="col-sm-3 control-label">Fisrt Name <span class="text-danger small">*</span></label>
-              <div class="col-sm-8">
-                <input type="text" class="form-control" id="inputName" placeholder="성" required>
-                <i class="fa fa-pencil form-control-feedback"></i>
-              </div>
-            </div>
-            <div class="form-group has-feedback">
-              <label for="inputLastName" class="col-sm-3 control-label">Last Name <span class="text-danger small">*</span></label>
-              <div class="col-sm-8">
-                <input type="text" class="form-control" id="inputLastName" placeholder="이름" required>
-                <i class="fa fa-pencil form-control-feedback"></i>
-              </div>
-            </div>
-            <div class="form-group has-feedback">
-              <label for="inputUserName" class="col-sm-3 control-label">User Name <span class="text-danger small">*</span></label>
-              <div class="col-sm-8">
-                <input type="text" class="form-control" id="inputUserName" placeholder="별명" required>
-                <i class="fa fa-user form-control-feedback"></i>
-              </div>
-            </div>
-            <div class="form-group has-feedback">
-              <label for="inputEmail" class="col-sm-3 control-label">Email <span class="text-danger small">*</span></label>
-              <div class="col-sm-8">
-                <input type="email" class="form-control" id="inputEmail" placeholder="이메일" required>
-                <i class="fa fa-envelope form-control-feedback"></i>
-              </div>
-            </div>
-            <div class="form-group has-feedback">
-              <label for="inputPassword" class="col-sm-3 control-label">Password <span class="text-danger small">*</span></label>
-              <div class="col-sm-8">
-                <input type="password" class="form-control" id="inputPassword" placeholder="비밀번호" required>
-                <i class="fa fa-lock form-control-feedback"></i>
-              </div>
-            </div>
-            <div class="form-group">
-              <div class="col-sm-offset-3 col-sm-8">
-                <div class="checkbox">
-                  <label>
-                    <input type="checkbox" required> Flight Bee의 <a class="active" href="#">사용자 약관</a> 과 <a class="active" href="#">개인정보 수집</a>에 동의합니다.
-                  </label>
-                </div>
-              </div>
-            </div>
-            <div class="form-group">
-              <div class="col-sm-offset-3 col-sm-8">
-                <button type="submit" class="btn btn-group btn-default btn-animated">가입하기 <i class="fa fa-check"></i></button>
-              </div>
-            </div>
-          </form>
+<div class="container">
+					<h2>어디로 떠나실 계획인가요?</h2>
+        <div class="row">
+          <div class="col-xs-12">
+            <div id="map-canvas" class="bordered"></div>
+          </div>
         </div>
-      </div>
-      <!-- main end -->
-    </div>
-  </div>
-</section>
+          <form role="form">
+						<div class="row">
+							<div class="col-md-4">
+								<div class="form-group has-success has-feedback">
+									<label class="control-label" for="inputSuccess3">Input with success</label>
+									<input type="text" class="form-control" id="inputSuccess3">
+									<i class="fa fa-check form-control-feedback"></i>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="form-group has-warning has-feedback">
+									<label class="control-label" for="inputWarning3">Input with warning</label>
+									<input type="text" class="form-control" id="inputWarning3">
+									<i class="fa fa-warning form-control-feedback"></i>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="form-group has-error has-feedback">
+									<label class="control-label" for="inputError3">Input with error</label>
+									<input type="text" class="form-control" id="inputError3">
+									<i class="fa fa-times form-control-feedback"></i>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-4">
+								<div class="form-group has-feedback">
+									<label class="control-label">Username</label>
+									<input type="text" class="form-control">
+									<i class="fa fa-user form-control-feedback"></i>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="form-group has-feedback">
+									<label class="control-label">Password</label>
+									<input type="password" class="form-control">
+									<i class="fa fa-lock form-control-feedback"></i>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="form-group has-feedback">
+									<label class="control-label">Email</label>
+									<input type="email" class="form-control">
+									<i class="fa fa-envelope-o form-control-feedback"></i>
+								</div>
+							</div>
+						</div>
+
+
+					<label>Message</label>
+					<textarea class="form-control" rows="3"></textarea>
+
+          <br>
+          <div class="radio">
+            <label>
+              <input type="radio" name="optionsRadios" id="optionsRadios4" value="option1" checked="">
+              비공개 여행경로입니다.
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="optionsRadios" id="optionsRadios5" value="option2">
+              다른 사람들에게도 공개합니다.
+            </label>
+          </div>
+
+          <a href="#" class="btn btn-default btn-lg btn-animated margin-clear">여행경로 작성완료<i class="fa fa-chevron-circle-right pl-10"></i></a>
+        </form>
+
+        </div>
 {% endblock content %}
 
 
@@ -159,4 +208,6 @@
 <script type="text/javascript" src="{% static "js/template.js"%}"></script>
 <!-- Custom Scripts -->
 <script type="text/javascript" src="{% static "js/custom.js"%}"></script>
+
+
 {% endblock jsblock%}

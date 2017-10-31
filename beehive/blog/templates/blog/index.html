@@ -4,7 +4,7 @@
 {% block headblock%}
 <head>
   <meta charset="utf-8">
-  <title>The Project | FlightBee</title>
+  <title>The Project : Flight Bee</title>
   <meta name="description" content="The Project a Bootstrap-based, Responsive HTML5 Template">
   <meta name="author" content="htmlcoder.me">
 
@@ -12,7 +12,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Favicon -->
-  <link rel="shortcut icon" href="images/favicon.ico">
+  <link rel="shortcut icon" href="{% static "images/favicon.ico"%}">
 
   <!-- Web Fonts -->
   <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
@@ -48,7 +48,7 @@
   <!-- Use css/rtl_typography-default.css for RTL version -->
   <link href="{% static "css/typography-default.css"%}" rel="stylesheet" >
   <!-- Color Scheme (In order to change the color scheme, replace the blue.css with the color scheme that you prefer)-->
-  <link href="{% static "css/skins/cool_green.css"%}" rel="stylesheet">
+  <link href="{% static "css/skins/light_blue.css"%}" rel="stylesheet">
 
 
   <!-- Custom css -->
@@ -162,7 +162,7 @@
               data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;"
               data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;"
               data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;">
-                <a href="#" class="btn-md-link padding-hor-clear">Read More <i class="fa fa-arrow-right"></i></a>
+                <a href="#" class="btn-md-link padding-hor-clear">자세히 <i class="fa fa-arrow-right"></i></a>
             </div>
 
             </li>
@@ -259,7 +259,7 @@
               data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;"
               data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;"
               data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;">
-                <a href="#" class="btn-md-link padding-hor-clear">Read More <i class="fa fa-arrow-right"></i></a>
+                <a href="#" class="btn-md-link padding-hor-clear">자세히 <i class="fa fa-arrow-right"></i></a>
             </div>
 
             </li>
@@ -356,7 +356,7 @@
               data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;"
               data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;"
               data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;">
-                <a href="#" class="btn-md-link padding-hor-clear">Read More <i class="fa fa-arrow-right"></i></a>
+                <a href="#" class="btn-md-link padding-hor-clear">자세히 <i class="fa fa-arrow-right"></i></a>
             </div>
 
             </li>
@@ -384,9 +384,9 @@
 
         <!-- page-title start -->
         <!-- ================ -->
-        <h1 class="page-title text-center">Featured Posts</h1>
-        <div class="separator with-icon"><i class="fa fa-pencil bordered"></i></div>
-        <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+        <h1 class="page-title text-center">가까운 황금연휴는? 당장 떠나세요.</h1>
+        <div class="separator with-icon"><i class="fa fa-suitcase bordered"></i></div>
+        <p class="text-center">이런 여행 계획은 어떠세요? 다른 여행자들이 직접 계획하고 공유하는 여행경로를 구경해보세요.</p>
         <br>
         <br>
         <!-- page-title end -->
@@ -399,7 +399,7 @@
           <!-- masonry grid item start -->
           <div class="masonry-grid-item col-sm-6 col-md-4">
             <!-- blogpost start -->
-            <article class="blogpost shadow light-gray-bg bordered">
+            <article class="blogpost white-bg bordered"><!--shadow-->
               <div id="carousel-blog-post" class="carousel slide" data-ride="carousel">
                 <!-- Indicators -->
                 <ol class="carousel-indicators bottom margin-clear">
@@ -447,7 +447,7 @@
               </div>
               <footer class="clearfix">
                 <div class="tags pull-left"><i class="icon-tags"></i> <a href="#">tag 1</a>, <a href="#">tag 2</a>, <a href="#">long tag 3</a></div>
-                <div class="link pull-right"><i class="icon-link"></i><a href="#">Read More</a></div>
+                <div class="link pull-right"><i class="icon-link"></i><a href="#">자세히</a></div>
               </footer>
             </article>
             <!-- blogpost end -->
@@ -458,13 +458,14 @@
           <!-- masonry grid item start -->
           <div class="masonry-grid-item col-sm-6 col-md-4">
             <!-- blogpost start -->
-            <article class="blogpost shadow light-gray-bg bordered">
+            <article class="blogpost bordered light-gray-bg">
               <div class="overlay-container">
                 <img src="{% static "images/blog-2.jpg"%}" alt="">
                 <a class="overlay-link" href="blog-post.html"><i class="fa fa-link"></i></a>
               </div>
               <header>
                 <h2><a href="blog-post.html">{{ post.title }}</a></h2>
+
                 <div class="post-info">
                   <span class="post-date">
                     <i class="icon-calendar"></i>
@@ -475,12 +476,13 @@
                   <span class="comments"><i class="icon-chat"></i> <a href="#">22 comments</a></span>
                 </div>
               </header>
+
               <div class="blogpost-content">
                 <p>{{ post.content|slice:"0:60" }}..</p>
               </div>
               <footer class="clearfix">
                 <div class="tags pull-left"><i class="icon-tags"></i> <a href="#">tag 1</a>, <a href="#">tag 2</a>, <a href="#">long tag 3</a></div>
-                <div class="link pull-right"><i class="icon-link"></i><a href="#">Read More</a></div>
+                <div class="link pull-right"><i class="icon-link"></i><a href="#">자세히</a></div>
               </footer>
             </article>
             <!-- blogpost end -->
@@ -491,7 +493,7 @@
           <!-- masonry grid item start -->
           <div class="masonry-grid-item col-sm-6 col-md-4">
             <!-- blogpost start -->
-            <article class="blogpost shadow light-gray-bg bordered object-non-visible" data-animation-effect="fadeInUpSmall" data-effect-delay="100">
+            <article class="blogpost light-gray-bg bordered object-non-visible" data-animation-effect="fadeInUpSmall" data-effect-delay="100">
               <header>
                 <h2><a href="blog-post.html">Text Post</a></h2>
                 <div class="post-info">
@@ -509,7 +511,7 @@
               </div>
               <footer class="clearfix">
                 <div class="tags pull-left"><i class="icon-tags"></i> <a href="#">tag 1</a>, <a href="#">tag 2</a>, <a href="#">long tag 3</a></div>
-                <div class="link pull-right"><i class="icon-link"></i><a href="#">Read More</a></div>
+                <div class="link pull-right"><i class="icon-link"></i><a href="#">자세히</a></div>
               </footer>
             </article>
             <!-- blogpost end -->
@@ -540,7 +542,7 @@
               </div>
               <footer class="clearfix">
                 <div class="tags pull-left"><i class="icon-tags"></i> <a href="#">tag 1</a>, <a href="#">tag 2</a>, <a href="#">long tag 3</a></div>
-                <div class="link pull-right"><i class="icon-link"></i><a href="#">Read More</a></div>
+                <div class="link pull-right"><i class="icon-link"></i><a href="#">자세히</a></div>
               </footer>
             </article>
             <!-- blogpost end -->
@@ -571,7 +573,7 @@
               </div>
               <footer class="clearfix">
                 <div class="tags pull-left"><i class="icon-tags"></i> <a href="#">tag 1</a>, <a href="#">tag 2</a>, <a href="#">long tag 3</a></div>
-                <div class="link pull-right"><i class="icon-link"></i><a href="#">Read More</a></div>
+                <div class="link pull-right"><i class="icon-link"></i><a href="#">자세히</a></div>
               </footer>
             </article>
             <!-- blogpost end -->

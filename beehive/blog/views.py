@@ -5,18 +5,27 @@ from .models import Post
 
 def index(request):
     post_list = Post.objects.all()
-    return render(request,'index.html',{
+    return render(request,'blog/index.html',{
         'post_list':post_list
     })
 
 def post_new(request):
-    return render(request, 'post_form.html')
+    return render(request, 'blog/post_form.html')
 
 def post_detail(request, pk):
     post = Post.objects.get(pk=pk)
-    return render(request, 'post_detail',{
+    return render(request, 'blog/post_detail',{
         'post':post
     })
+
+def another(request):
+    return render(request, 'blog/another.html')
+
+def myroute(request):
+    return render(request, 'blog/myroute.html')
+
+def write(request):
+    return render(request, 'blog/write.html')
 
 def signup(request):
     return render(request, 'blog/signup.html')
@@ -36,6 +45,7 @@ def contacts(request):
 
 def feedback(request):
     return render(request, 'blog/feedback.html')
+
 
 def blog(request):
     post_list = Post.objects.all()

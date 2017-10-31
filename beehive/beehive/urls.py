@@ -15,19 +15,21 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from blog.views import  index,post_new,post_detail,base,resume,portfolio,contacts,feedback,blog,signup
+from blog.views import *
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', index, name='index'),
     url(r'^index', index, name='index'),
     url(r'^signup/$', signup ,name='signup'),
-
-    url(r'^resume/', resume, name='resume'),
-    url(r'^portfolio/$', portfolio ,name='portfolio'),
-    url(r'^contacts/$', contacts ,name='contacts'),
-    url(r'^feedback/$', feedback ,name='feedback'),
-    url(r'^blog/$', blog ,name='blog'),
+    url(r'^another/$', another ,name='another'),
+    url(r'^myroute/$', myroute ,name='myroute'),
+    url(r'^write/route$', write ,name='write'),
+    #url(r'^resume/', resume, name='resume'),
+    #url(r'^portfolio/$', portfolio ,name='portfolio'),
+    #url(r'^contacts/$', contacts ,name='contacts'),
+    #url(r'^feedback/$', feedback ,name='feedback'),
+    #url(r'^blog/$', blog ,name='blog'),
 
     url(r'^new/$', post_new ,name='post_new'),
     url(r'^blog/(?P<pk>\d+)/$', post_detail ,name='post_detail'),
